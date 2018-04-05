@@ -1,4 +1,4 @@
-Data size Conversion from Byte to KB , KB to MB and So on....
+**Data size Conversion from Byte to KB , KB to MB and So on....
 function formatBytes(bytes) {
     if(bytes < 1024) return bytes + " Bytes";
     else if(bytes < 1048576) return(bytes / 1024).toFixed(3) + " KB";
@@ -8,3 +8,14 @@ function formatBytes(bytes) {
 
 Site Link - https://stackoverflow.com/questions/15900485/correct-way-to-convert-size-in-bytes-to-kb-mb-gb-in-javascript?
 utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+
+------------------------------------------------------------------------------
+** Formatting Price with comma like 10,000 etc..
+function currencyFormat (num) {
+    return "$" + num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+}
+
+console.info(currencyFormat(2665));   // $2,665.00
+console.info(currencyFormat(102665)); // $102,665.00
+
+Site Link - https://blog.tompawlak.org/number-currency-formatting-javascript
